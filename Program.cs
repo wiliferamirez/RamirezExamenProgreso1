@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using RamirezExamenProgreso1.Data;
+
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<RamirezExamenProgreso1Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RamirezExamenProgreso1Context") ?? throw new InvalidOperationException("Connection string 'RamirezExamenProgreso1Context' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 
