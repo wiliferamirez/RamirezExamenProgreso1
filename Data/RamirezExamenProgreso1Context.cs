@@ -15,5 +15,6 @@ namespace RamirezExamenProgreso1.Data
         }
 
         public DbSet<RamirezExamenProgreso1.Models.Clientes> Clientes { get; set; } = default!;
+        public DbSet<RamirezExamenProgreso1.Models.Reserva> Reservas { get; set; } = default!;
     }
 }
