@@ -45,7 +45,8 @@ namespace RamirezExamenProgreso1.Models
         public bool VIPCliente { get; set; }
 
         [Display(Name = "Puntos de Recompensa")]
-        public int PuntosRecompensa { get; set; }
+        public int PuntosRecompensa { get; set; } = 0;
+
         [ForeignKey("TipoPlanRecompensa")]
         public int TipodePlanRecompensa { get; set; }
         public string RamirezW { get; set; }
