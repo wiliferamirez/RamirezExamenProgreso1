@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RamirezExamenProgreso1.Models
 {
@@ -42,6 +43,11 @@ namespace RamirezExamenProgreso1.Models
         [Display(Name = "TipoCliente")]
         [Required(ErrorMessage = "Campo Obligatorio")]
         public bool VIPCliente { get; set; }
+
+        [Display(Name = "Puntos de Recompensa")]
+        public int PuntosRecompensa { get; set; }
+        [ForeignKey("TipoPlanRecompensa")]
+        public int TipodePlanRecompensa { get; set; }
         public string RamirezW { get; set; }
     }
 }
